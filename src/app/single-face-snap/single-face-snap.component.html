@@ -1,0 +1,41 @@
+<div class="face-snap-card" [ngClass]="{ snapped: faceSnap.isSnapped }">
+    <h2>
+        <a routerLink="/facesnaps">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" style="width:18px">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+            </svg>
+        </a>
+        {{ faceSnap.title | titlecase }}
+    </h2> <!-- | uppercase | lowercase-->
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            style="width:18px;">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+        </svg>
+        Mise en ligne {{ faceSnap.createdDate | date: 'le d MMMM yyyy, à HH:mm' }} <!-- medium, longDate, longTime-->
+    </p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <p>{{ faceSnap.description }}</p>
+    <!-- <p *ngIf="faceSnap.location">
+        Lieux: {{ faceSnap.location }}
+    </p> -->
+    <div *ngIf="faceSnap.location; then haveLocation else dontHaveLocation"></div>
+
+
+    <ng-template #haveLocation>Lieux: {{ faceSnap.location }}</ng-template>
+    <ng-template #dontHaveLocation>Lieux: N/A</ng-template>
+    <p>
+        <button (click)="onSnap()">{{ !faceSnap.isSnapped ? "Oh Snap!" : "Oops, unSnap!" }}</button>
+        <span class="counter">
+            <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 7px; width:18px; color:red;" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            <span [ngStyle]="{ color: 'rgb(0,0,' + faceSnap.snaps +')' }">{{ faceSnap.snaps
+                }}</span>
+        </span>
+    </p>
+</div>

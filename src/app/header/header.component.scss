@@ -1,0 +1,22 @@
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #EEE;
+}
+
+a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 6px;
+
+    &:hover {
+        color: #666;
+    }
+}
+
+.active {
+    color: #666;
+    border-bottom: #666 solid;
+}
