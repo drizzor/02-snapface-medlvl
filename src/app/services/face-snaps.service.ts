@@ -8,8 +8,8 @@ export class FaceSnapsService {
     faceSnaps: FaceSnap[] = [
         {
             id: 1,
-            title: "Mon super titre",
-            description: "Une description courte, mais éfficace",
+            title: "Consequat minim non est",
+            description: "Officia cillum veniam magna in. Exercitation id do ex commodo ipsum mollit nisi. Voluptate amet voluptate mollit quis pariatur aliqua excepteur voluptate aute aliqua duis deserunt proident enim. Eu nisi do eu aliquip aute est. Ut aliqua aliqua sint fugiat commodo enim labore laborum fugiat ipsum esse incididunt aliqua do. Non reprehenderit nulla proident minim Lorem ut sint in velit proident do. Ipsum sunt nisi eu ut labore est dolor occaecat velit culpa in amet mollit culpa.",
             createdDate: new Date(),
             snaps: 9,
             imageUrl: "https://placehold.co/400x200/5A5A5A/FFFFFF",
@@ -18,8 +18,8 @@ export class FaceSnapsService {
         },
         {
             id: 2,
-            title: "Wouf",
-            description: "Qu'il est beau le toutou !",
+            title: "Cillum ea magna",
+            description: "Do ea enim deserunt eiusmod nostrud elit proident velit labore esse dolor amet nisi. Esse non aute in quis magna enim cupidatat. Et reprehenderit veniam consequat culpa occaecat eu mollit. Quis mollit sunt anim ea elit duis et eu consectetur ut ex magna deserunt. Ex officia do consequat sunt et sit dolore labore incididunt deserunt. Officia elit eiusmod consectetur Lorem nostrud incididunt.",
             createdDate: new Date(),
             snaps: 350,
             imageUrl: "https://placehold.co/400x200/5A5A5A/FFFFFF",
